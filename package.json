@@ -1,0 +1,36 @@
+{
+  "name": "hostinger-ai-android-work",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "build:web": "vite build",
+    "preview": "vite preview",
+    "models:test": "node scripts/model_smoke_test.mjs",
+    "android:init": "npx cap add android",
+    "android:sync": "npm run build:web && npx cap sync android",
+    "android:release": "npm run android:sync && cd android && JAVA_HOME=/usr/local/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home ./gradlew clean assembleRelease bundleRelease",
+    "android:install-release": "adb install -r release-artifacts/rafaygen-ai-agent-release.apk",
+    "ios:init": "npx cap add ios",
+    "ios:sync": "npm run build:web && npx cap sync ios",
+    "ios:open": "npx cap open ios",
+    "ios:build:unsigned": "bash scripts/build_ios_unsigned.sh"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.1.0",
+    "@capacitor/core": "^8.1.0",
+    "@capacitor/ios": "^8.1.0",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.1.0",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^5.1.4",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
+  }
+}

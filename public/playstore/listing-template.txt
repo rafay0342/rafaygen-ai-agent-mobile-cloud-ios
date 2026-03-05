@@ -1,0 +1,21 @@
+APP TITLE
+RafayGen AI Agent
+
+SHORT DESCRIPTION (<= 80)
+AI agent workspace with chat, pricing plans, payments, and custom themes.
+
+FULL DESCRIPTION
+RafayGen AI Agent is a production-ready mobile workspace for AI-powered workflows.
+
+Key features:
+- Multi-screen app architecture (Dashboard, Agent, Pricing, Payment, Settings)
+- Drawer navigation with swipe-open and button-open support
+- Light, Dark, and Light-Skin theme modes
+- Plan selection and payment handoff flow
+- Backend endpoint integration for /api/models and /api/chat
+- Runtime settings for API URL, web app URL, and payment URL
+
+Built for smooth performance on modern Android devices with release optimization and signed bundles.
+
+PRIVACY POLICY URL
+https://your-domain/privacy

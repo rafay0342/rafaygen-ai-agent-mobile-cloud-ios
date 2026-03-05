@@ -1,0 +1,11 @@
+node_modules/
+dist/
+release-artifacts/
+android/.gradle/
+android/build/
+android/app/build/
+android/app/keystore/
+android/keystore.properties
+ios/App/build/
+ios/App/DerivedData/
+.DS_Store
