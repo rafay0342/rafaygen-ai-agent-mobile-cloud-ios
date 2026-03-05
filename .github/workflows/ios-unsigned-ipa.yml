@@ -19,7 +19,7 @@ on:
 
 jobs:
   build-ios-unsigned:
-    runs-on: macos-14
+    runs-on: macos-latest
     timeout-minutes: 45
 
     steps:
